@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Well Come To Backbone</title>
+    <script src="jquery-2.1.1.js"></script>
+    <script src="underscore.js"></script>
+    <script src="backbone.js"></script>
+</head>
+<body>
+
+
+<!--cdn content -->
+<!--backbone < 1jQuery; 2underscore.js-->
+
+<div id="container"></div>
+
+
+<script>
+
+var MyView = Backbone.View.extend({
+
+    attributes:{
+        id:'main',
+        class:'blue',
+       'data-record':56
+    },
+    className:'red',
+//    tagName:"li",
+//    tagName:"td",
+    tagName:"section",
+    initialize:function(){
+        console.log('started',this);
+    },
+    render : function(){
+        this.$el.append('<h2>Hello World</h2>');
+      return this;
+    }
+
+});
+    var myview1 = new MyView();
+    console.log(myview1);
+
+    $('#container').append(myview1.render().el)
+
+
+</script>
+</body>
+</html>
