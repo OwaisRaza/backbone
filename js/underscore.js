@@ -1254,8 +1254,8 @@
     return prefix ? prefix + id : id;
   };
 
-  // By default, Underscore uses ERB-style template delimiters, change the
-  // following template settings to use alternative delimiters.
+  // By default, Underscore uses ERB-style templates delimiters, change the
+  // following templates settings to use alternative delimiters.
   _.templateSettings = {
     evaluate    : /<%([\s\S]+?)%>/g,
     interpolate : /<%=([\s\S]+?)%>/g,
@@ -1299,7 +1299,7 @@
       (settings.evaluate || noMatch).source
     ].join('|') + '|$', 'g');
 
-    // Compile the template source, escaping string literals appropriately.
+    // Compile the templates source, escaping string literals appropriately.
     var index = 0;
     var source = "__p+='";
     text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
